@@ -227,7 +227,7 @@ p, #play{
     }
     #group:active{
         transition: ease-in-out;
-        animation: spin 2s infinite;
+        animation: spin 2s;
     }
 
 }
