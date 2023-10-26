@@ -164,7 +164,10 @@ p, #play{
 
 /* Mobile Phone Media Query*/
 @media screen and (max-width: 768px){
-    
+    .slides{
+        max-width:300px;
+    }
+
     p, #play{
         font-size:18px;
     }
