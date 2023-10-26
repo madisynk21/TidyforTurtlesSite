@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title> Tidy for Turtles </title>
+    <style>
+       
+       #kingContainer{
+            border: #82ca9c solid 5px;
+            width:80%;
+            margin: 25px auto;
+            justify-content: center;
+
+        }
+
+        #meetCast{
+            display: none;
+        }
+
+        #kingDescription2{
+            display:none;
+        }
+
+       #king2, #king1{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width:15%;
+       }
+
+       #king2{
+        display:none;
+       }
+
+        #sheltonsImages{
+            display:none;
+        }
+
+        table{
+            border-spacing:100px 100px;
+            border: solid 5px #82ca9c;
+            margin:20px
+        }
+
+        td{
+            color:#2db2e5;
+            font-size: 1.8vw;
+            text-align:center
+        }
+
+        h2, h4{
+            background-color: #fff2e5;
+            transition: 0.7s ease;
+            margin-left:20%;
+            margin-right:20%;
+            padding:2.5%;
+            border-radius: 10px;
+            border-style: solid;
+            border-color: #82ca9c;
+            border-width: 5px;
+            text-align: center;
+        }
+
+        h3{
+            text-align: center;
+            margin-bottom:25px;
+            display: none;
+        }
+
+        .turtle{
+            width:100%;
+        }
+
+        .tiny{
+            width:60%;
+        }
+
+        .heading{
+            background-image: url("Images/sand.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        /*make meadia query for this page*/
+
+
+        @media screen and (max-width:900px){
+        #sheltonsImages{
+        
+            display:flex;
+            flex-direction: column;
+        }
+        h2{
+            border:none;
+            margin-top:-1;
+            font-size: 22px;
+        }
+
+        h3{
+            display:block;
+            font-size: 16px;
+        }
+
+        .meet{
+            background-color: #fff2e5;
+            border-radius: 10px;
+            border-style: solid;
+            border-color: #82ca9c;
+            border-width: 5px;
+            width: 75%;
+            margin: auto;
+        }
+        
+        #sheltonsTable{
+            display:none;
+        }
+
+        .description{
+            display:none;
+        }
+        
+
+
+        p{
+            width:400px;
+            margin:auto;
+        }
+
+        td{
+            font-size:16px;
+        }
+        .turtle{
+            width:40%;
+            margin:auto;
+            padding:25px;
+            cursor: pointer;
+        }
+
+        .tiny{
+            width:27%;
+            margin:auto;
+            padding:25px;
+            cursor: pointer;
+        }
+
+        .turtle:hover, .tiny:hover{
+            transition: 1s;
+            filter:saturate(2)
+        }
+
+        #king2{
+            width:50%;
+
+        }
+
+        #kingContainer{
+            border:none;
+            margin-top:5px;
+        }
+
+        .heading1{
+            display: none;
+        }
+
+
+        #kingDescription1{
+            display:none;
+        }
+
+        #meetKing{
+            display:none;
+        }
+
+        #king2{
+        display:block;
+        margin: none;
+       }
+
+       #king1{
+        display:none;
+       }
+
+       #meetSheltons1{
+        display:none;
+       }
+
+       #meetCast{
+        display:block;
+       }
+
+    }
+
+
+    </style>
+</head>
+
+<body onload="displayTrevor(); displayTilly(); displayTiny(); displayTucker(); displayKing();">
+    <!--banner and nav bar-->
+    <header>
+
+        <nav class="navbar">
+            <a href="index.html"><img id="logo" src="Images/logo.png"></a>
+
+            <ul class="menu">
+                <li class="item">
+                    <a href="index.html" class="link">Home</a>
+                </li>
+                <li class="item">
+                    <a href="about.html" class="link">About Us</a>
+                </li>
+                <li class="item">
+                    <a href="aboutgame.html" class="link">About Game</a>
+                </li>
+                <li class="item">
+                    <a href="gameplay.html" class="link">Gameplay</a>
+                </li>
+                <li class="item">
+                    <a href="download.html" class="link">Download</a>
+                </li>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+        </nav>
+
+    </header>
+    <script src="script.js">  </script>
+
+ 
+    <h1>~About Game~</h1>
+
+    <!--list of characters and descriptions--> 
+    <div class="meet">
+    <h2 class="heading" id="meetSheltons1">Meet the Sheltons</h2>
+    <h2 class="heading" id="meetCast">Meet the Cast</h2>
+    <h3>Click each character to learn more about them!</h3>
+    </div>
+    <table id="sheltonsTable">
+        <tr>
+            <td><img class="turtle" src="Images/logo.png"></td>
+            <td>This is Trevor. He loves seashells and leading his buddies to the ocean. 
+                Try not to squish him though or you'll ruin all of the other turtles's chances of reaching the sea.
+            </td>
+        </tr>
+        <tr>
+            <td><img class="turtle" src="Images/tilly.png"></td>
+            <td> 
+                Tilly loves tea. Not just any tea. Tea made with ocean water. Don't crush her so that she can have her salty sea tea. 
+            </td>
+        </tr>
+        <tr>
+            <td><img class="tiny" src="Images/tiny.png"></td>
+            <td> 
+                Meet Tiny. He may be the runt of the litter, but don't let that fool you! 
+                He's one powerful turtle. Step on him and he'll shell shock you by ending your game just like his brothers and sister!
+            </td>
+        </tr>
+        <tr>
+            <td><img class="turtle" src="Images/tucker.png"></td>
+            <td> 
+                And last but not least... this is Tucker. Though he's not the brightest bulb in the bunch, he's pretty cute.
+            </td>
+        </tr>
+    </table>
+
+
+    <div id="sheltonsImages">
+        <img onclick="displayTrevor()" class="turtle" src="Images/logo.png">
+        
+        <p id="trevor" class ="description">
+            This is Trevor. He loves seashells and leading his buddies to the ocean. 
+            Try not to squish him though or you'll ruin all of the other turtles's chances of reaching the sea.
+        </p>
+        <img onclick="displayTilly()" 
+        class="turtle" src="Images/tilly.png">
+
+        <p id="tilly" class ="description">
+            Tilly loves tea. Not just any tea. Tea made with ocean water. Don't crush her so that she can have her salty sea tea. 
+        </p>
+
+        <img onclick="displayTiny()" class="tiny" src="Images/tiny.png">
+
+        <p id="tiny" class ="description">
+            Meet Tiny. He may be the runt of the litter, but don't let that fool you! 
+            He's one powerful turtle. Step on him and he'll shell shock you by ending your game just like his brothers and sister!
+        </p>
+
+        <img onclick="displayTucker()" class="turtle" src="Images/tucker.png">
+
+        <p id="tucker" class ="description">
+            Tucker's the name of this here turtle. Though he's not the brightest bulb in the bunch, he's pretty cute.
+        </p>
+
+        <img onclick="displayKing()" class="turtle" id= "king2" src="Images/mr.king.png">
+        <p id="kingDescription2">Mr. King is an Information Technology Services Teacher at Greater Lowell Tech. He has been reportedly seen wearing a pink shirt and cleaning up trash along the beach to support his student's video game project to address environmental issues.  In case your're wondering... he drove to beach in his electric car.</p>
+    </div>
+
+    <div class="meet" id="meetKing">
+        <h2 class="heading">Meet Mr. King</h2>
+        <h3>Click each turtle to learn more about them!</h3>
+    </div>
+
+    <div class="desktop">
+    <div id="kingContainer">
+    <img id= "king1" src="Images/mr.king.png">
+    <p id="kingDescription1">Mr. King is an Information Technology Services Teacher at Greater Lowell Tech. He has been reportedly seen wearing a pink shirt and cleaning up trash along the beach to support his student's video game project to address environmental issues.  In case you're wondering... he drove to beach in his electric car.</p>
+    </div>
+
+    
+    
+    
+
+
+
+    <script>
+        function displayKing(){
+            var king = document.getElementById("kingDescription2");
+            if (king.style.display === "none") {
+                king.style.display = "block";
+            } else {
+                king.style.display = "none";
+            }
+        }
+
+        function displayTrevor(){
+            var trevor = document.getElementById("trevor");
+            if (trevor.style.display === "none") {
+                trevor.style.display = "block";
+            } else {
+                trevor.style.display = "none";
+            }
+        }
+
+        function displayTilly(){
+            var tilly = document.getElementById("tilly");
+            if (tilly.style.display === "none") {
+                tilly.style.display = "block";
+            } else {
+                tilly.style.display = "none";
+            }
+        }
+
+        function displayTiny(){
+            var tiny = document.getElementById("tiny");
+            if (tiny.style.display === "none") {
+                tiny.style.display = "block";
+            } else {
+                tiny.style.display = "none";
+            }
+        }
+
+        function displayTucker(){
+            var tucker = document.getElementById("tucker");
+            if (tucker.style.display === "none") {
+                tucker.style.display = "block";
+            } else {
+                tucker.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

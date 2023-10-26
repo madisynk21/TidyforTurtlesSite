@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title> Tidy for Turtles </title>
+
+    <style>
+      
+      table{
+        margin-right:auto;
+        margin-left:auto;
+      }
+        
+        td>img, #madisyn, #javier{
+            border-radius:10px;
+            border-width:5px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h2{
+            text-align: center;
+            padding:2.5%;
+            border-radius: 10px;
+            border-style: solid;
+            border-color: #82ca9c;
+            border-width: 5px;
+            background-image: url("Images/sand.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            color:#2db2e5;
+            width:50%;
+            margin:100px auto;
+        }
+
+        p{
+            font-weight: bold;
+        }
+
+        #madisynDescription, #javierDescription{    
+            display:none;
+        }
+    
+
+        
+    @media screen and (max-width: 1200px){ 
+        .usContainer{
+            display:block;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+        }
+
+        .Madisyn, .Javier{
+            margin:auto;
+            width: 60%;
+            margin:auto;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #madisyn, #javier{
+            width: 80%;
+            margin:auto;
+            margin-top:10px;
+        }
+
+        table{
+            display:none;
+        }
+
+        h2{
+            margin:5% auto;
+            font-size: 25px;
+        }
+
+
+
+}
+
+
+    </style>
+
+</head>
+
+<body onload="displayMadisyn(); displayJavier();">
+    <header>
+
+        <nav class="navbar">
+            <a href="index.html"><img id="logo" src="Images/logo.png"></a>
+
+            <ul class="menu">
+                <li class="item">
+                    <a href="index.html" class="link">Home</a>
+                </li>
+                <li class="item">
+                    <a href="about.html" class="link">About Us</a>
+                </li>
+                <li class="item">
+                    <a href="aboutgame.html" class="link">About Game</a>
+                </li>
+                <li class="item">
+                    <a href="gameplay.html" class="link">Gameplay</a>
+                </li>
+                <li class="item">
+                    <a href="download.html" class="link">Download</a>
+                </li>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+        </nav>
+
+    </header>
+    <script src="script.js"> </script>
+ 
+    <h1>~About Us~</h1>
+
+    <h2>Meet the Team</h2>
+
+    <table>
+        <tr>
+            <td><img  src="Images/Madisyn.jpg"></td>
+            <td><img  src="Images/Javier.jpg"></td>
+        </tr>
+
+        <tr>
+            <td class="info">
+                    Hi, I'm Madisyn!
+                    <br>
+                    I'm the web designer/developer  for the Tidy for Turtles website (The site you're on right now).
+                    I was also the planner and artist for this project. 
+                    Aside from computer science, I'm interested in reading and baking.<br>
+                    P.S. I DID NOT draw Mr. King's arms<br>
+                    Email: 104810@gltech.org 
+            </td>
+            <td class="info">
+                Hello, I'm Javier!
+                <br>
+                I'm the game designer/developer for Tidy for Turtles. As much as I love computer science and programming, my favorite things to do is sleep. If I'm
+                not snoring somewhere, you can find me making music. <br>
+                P.S. I'm the one responsible for drawing Mr. King's crazy arms<br>
+                Email: 104851@gltech.org
+            </td>
+        </tr>
+
+    </table>
+    
+    <div class="usContainer">
+        
+        <div class="Madisyn">
+            <img id="madisyn" src="Images/Madisyn.jpg" onclick="displayMadisyn()">
+            
+            <p id="madisynDescription">
+                Hi, I'm Madisyn!
+                <br>
+                I'm the web designer/developer for the Tidy for Turtles website (The site you're on right now). I was also the planner and artist for this project.
+                Aside from computer science, I'm interested in reading and baking.<br>
+                P.S. I DID NOT draw Mr. King's arms<br>
+                Email: 104810@gltech.org
+            </p>
+        </div>
+
+        <div class="Javier">
+            <img id="javier" src="Images/Javier.jpg" onclick="displayJavier()">
+
+            <p id="javierDescription">
+                Hello, I'm Javier!
+                <br>
+                I'm the game designer/developer for Tidy for Turtles as well as the composer. As much as I love computer science and programming,  my favorite things to do is sleep. If I'm not snoring somewhere, you can find me making music.<br>
+                P.S. I'm responsible for drawing Mr. King's crazy arms<br>
+                Email: 104851@gltech.org
+            </p>
+        </div>
+
+    </div>
+
+    <h2>Inspiration</h2>
+    <p class="inspire">
+        Today's beaches are littered with trash that is harming marine ecosystems.<br> 
+        Everday sea turtles are dying because they are accidently consuming garbage.<br>
+        Not only is beach pollution harming adult sea turtles, but hatclings as well.<br>
+        The waste that overwhelms many beaches is interferring with baby sea turtles<br>
+        making their way to the beach, preventing them from starting their turtle-rific lives.<br>
+        This pending environmental issue is the inspiration behind our game which is based on<br>
+        well known platformer games such as Super Mario.
+    </p>
+
+  <script>
+    
+ function displayMadisyn(){
+        var madisyn = document.getElementById("madisynDescription");
+        if (madisyn.style.display === "none") {
+        madisyn.style.display = "block";
+        } else {
+        madisyn.style.display = "none";
+        }
+}
+
+function displayJavier(){
+        var javier = document.getElementById("javierDescription");
+        if (javier.style.display === "none") {
+            javier.style.display = "block";
+        } else {
+            javier.style.display = "none";
+        }
+}
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title> Tidy for Turtles </title>
+</head>
+
+<style>
+    figcaption{
+        text-align: center;
+        font-size: 24px;
+        background-color:#fff2e5;
+        margin: 1%;
+    }
+    h3{
+        text-align: center;
+        color:#2db2e5;
+    }
+
+    #play{
+        font-size: 1.5vw;
+    }
+
+    #title{
+        border: solid 4px #82ca9c;
+        display:block;
+        width:60%;
+        margin-right:auto;
+        margin-left:auto;
+    }
+
+    video{
+        display: block;
+        margin: auto;
+        width:50%;
+        border: solid 5px #82ca9c;
+        box-shadow: 25px 20px 30px #2db2e5;
+    }
+
+    @media screen and (max-width:900px){
+        #play{
+            font-size:14px;
+        }
+
+        #keys{
+            border:none;
+            box-shadow: none;
+        }
+
+        #title{
+            width:75%;
+        }
+
+        h2{
+            font-size:24px;
+        }
+
+        video{
+            width:75%;
+        }
+    }
+
+</style>
+
+<body>
+    <!--banner and nav bar-->
+    <header>
+
+        <nav class="navbar">
+            <a href="index.html"><img id="logo" src="Images/logo.png"></a>
+
+            <ul class="menu">
+                <li class="item">
+                    <a href="index.html" class="link">Home</a>
+                </li>
+                <li class="item">
+                    <a href="about.html" class="link">About Us</a>
+                </li>
+                <li class="item">
+                    <a href="aboutgame.html" class="link">About Game</a>
+                </li>
+                <li class="item">
+                    <a href="gameplay.html" class="link">Gameplay</a>
+                </li>
+                <li class="item">
+                    <a href="download.html" class="link">Download</a>
+                </li>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+        </nav>
+
+    </header>
+    <script src="script.js"></script>
+
+ 
+    <h1>~Gameplay~</h1>
+
+    <h2 class="heading">Objective</h2>
+    <p>Save the sea turtles by collecting as much trash as you can without stepping on any innocent baby turtles.</p>
+
+    <h2>Demo</h2>
+    <video controls>
+        <source src="Videos\video.webm" type="video/webm">
+    </video>
+
+
+    <h2>How to play</h2>
+    <div id="play">
+    <p id="keys">Use the WASD keys, arrow keys, or space bar to move Mr. King.</p>
+    <h3>Want to move forward? Press the "D" key or right arrow key.</h3>
+    <h3>What about moving backwards? Press the "A" key or left arrow key.</h3>
+    <h3>Oh no! There's a turtle in the way! How can Mr. King jump? Press the "W" key, the up arrow key, or the space bar.</h3>
+    </div>
+    <h2>How to Score Points</h2>
+    <p>Walk or jump into a piece of trash to collect it. Each piece of trash is worth one point. Be careful, though. If you run into a turtle, you'll lose all of your points and the game.<br>
+    Pro tip: you have to collect at least 9 pieces of trash in order to win. After all what would be the point of a beach clean up if you didn't pick up a good amount of trash?
+    </p>
+    <figure>
+    <img id="title" src="Images\title.png">
+    <figcaption>For additional help click the "help" button on the title screen of the game</figcaption>
+    </figure>
+
+</body>
+</html>
