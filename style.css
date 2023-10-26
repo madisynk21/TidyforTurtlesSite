@@ -233,14 +233,5 @@ p, #play{
 }
 
 
-@media screen and (max-width: 1000px) {
-     .slides{
-        width:500px;
-    }
-    #slidesContainer{
-        max-height:350px;
-        min-width:  475px;
-    }
 
-}
 
