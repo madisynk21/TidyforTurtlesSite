@@ -80,7 +80,6 @@ a{
     overflow: hidden;
     width: 65%;
     max-height:600px;
-    min-width: 800px;
     margin: auto;
     border:#82ca9c solid;
 }
@@ -227,6 +226,7 @@ p, #play{
         transition: ease-in-out;
         animation: spin 2s infinite;
     }
+
 }
 
 
